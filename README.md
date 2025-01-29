@@ -137,7 +137,7 @@ Este projeto é um sistema de rastreamento de caminhões em tempo real, desenvol
    ```
 6. Acesse no navegador:
    ```
-   http://localhost:3000
+   http://localhost:3000 ( verifique a possibilidade da porta estar sendo usada )
    ```
 
 ## 📡 Estrutura do Projeto
@@ -165,7 +165,7 @@ Este projeto é um sistema de rastreamento de caminhões em tempo real, desenvol
 ✅ Suporte para vários dispositivos
 
 ## 🤝 Contribuição
-Fique à vontade para contribuir! Basta seguir os passos:
+Para a contribuição da equipe, siga os passos abaixo:
 1. Fork este repositório
 2. Crie um branch com sua funcionalidade: `git checkout -b minha-feature`
 3. Commit suas alterações: `git commit -m 'Adicionando funcionalidade X'`
