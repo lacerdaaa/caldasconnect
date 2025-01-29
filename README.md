@@ -1,36 +1,184 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🚛 Rastreamento de Caminhões - Next.js + AWS + WebSockets
 
-## Getting Started
+## 📌 Sobre o Projeto
+Este projeto é um sistema de rastreamento de caminhões em tempo real, desenvolvido com **Next.js**, utilizando **AWS** para infraestrutura e **WebSockets** para conexão em tempo real. O objetivo é permitir a monitoria da localização dos caminhões em um painel dinâmico.
 
-First, run the development server:
+## 🛠️ Tecnologias Utilizadas
+- **Next.js** - Framework React para aplicações web
+- **AWS Lambda** - Para processamento serverless
+- **AWS API Gateway** - Para gestão das conexões WebSocket
+- **AWS DynamoDB** - Para armazenamento de localização em tempo real
+- **AWS IoT Core** - Para gerenciamento dos dispositivos conectados
+- **WebSockets** - Para comunicação em tempo real entre frontend e backend
+- **Mapbox / Google Maps API** - Para renderização do mapa
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+## 🚀 Como Executar o Projeto
+### 🔧 Requisitos
+- Node.js instalado (versão 16+ recomendada)
+- Conta AWS configurada com permissões adequadas
+- Chave de API para Mapbox ou Google Maps
+
+### 🏗️ Instalação
+1. Clone o repositório:
+   ```sh
+   git clone https://github.com/lacerdaaa/caldasconnect.git
+   ```
+2. Acesse o diretório do projeto:
+   ```sh
+   cd caldasconnect
+   ```
+3. Instale as dependências:
+   ```sh
+   npm install
+   # ou
+   yarn install
+   ```
+4. Configure as variáveis de ambiente:
+   Crie um arquivo `.env.local` e adicione:
+   ```env
+   NEXT_PUBLIC_MAP_API_KEY=SUACHAVE
+   AWS_REGION=us-east-1
+   AWS_IOT_ENDPOINT=wss://xxxxx.iot.us-east-1.amazonaws.com/mqtt
+   ```
+5. Inicie o projeto em modo de desenvolvimento:
+   ```sh
+   npm run dev
+   # ou
+   yarn dev
+   ```
+6. Acesse no navegador:
+   ```
+   http://localhost:3000
+   ```
+
+## 📡 Estrutura do Projeto
+```
+├── components/       # Componentes reutilizáveis do Next.js
+├── pages/            # Páginas principais da aplicação
+├── services/         # Serviços para comunicação com AWS e WebSockets
+├── utils/            # Funções auxiliares
+├── public/           # Arquivos estáticos
+├── styles/           # Estilização do projeto
+└── .env.local        # Configuração de variáveis sensíveis
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 📡 Fluxo de Comunicação
+1. O cliente (Next.js) se conecta ao **AWS API Gateway WebSocket**.
+2. O backend (AWS Lambda) recebe e processa os eventos de localização.
+3. As coordenadas dos caminhões são armazenadas no **DynamoDB**.
+4. O frontend escuta as atualizações e exibe os caminhões no mapa.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 📌 Funcionalidades
+✅ Rastreamento em tempo real via WebSockets
+✅ Mapa interativo para visualização da frota
+✅ Integração com AWS para escalabilidade
+✅ Interface responsiva com Next.js
+✅ Suporte para vários dispositivos
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 🤝 Contribuição
+Fique à vontade para contribuir! Basta seguir os passos:
+1. Fork este repositório
+2. Crie um branch com sua funcionalidade: `git checkout -b minha-feature`
+3. Commit suas alterações: `git commit -m 'Adicionando funcionalidade X'`
+4. Envie para o branch principal: `git push origin minha-feature`
+5. Abra um Pull Request 🚀
 
-## Learn More
+## 📜 Licença
+Este projeto está sob a licença MIT - veja o arquivo [LICENSE](LICENSE) para mais detalhes.
 
-To learn more about Next.js, take a look at the following resources:
+---
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Desenvolvido por [Lacerda](https://github.com/lacerdaaa) 🚀
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+# 🚛 Rastreamento de Caminhões - Next.js + AWS + WebSockets
 
-## Deploy on Vercel
+## 📌 Sobre o Projeto
+Este projeto é um sistema de rastreamento de caminhões em tempo real, desenvolvido com **Next.js**, utilizando **AWS** para infraestrutura e **WebSockets** para conexão em tempo real. O objetivo é permitir a monitoria da localização dos caminhões em um painel dinâmico.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## 🛠️ Tecnologias Utilizadas
+- **Next.js** - Framework React para aplicações web
+- **AWS Lambda** - Para processamento serverless
+- **AWS API Gateway** - Para gestão das conexões WebSocket
+- **AWS DynamoDB** - Para armazenamento de localização em tempo real
+- **AWS IoT Core** - Para gerenciamento dos dispositivos conectados
+- **WebSockets** - Para comunicação em tempo real entre frontend e backend
+- **Mapbox / Google Maps API** - Para renderização do mapa
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## 🚀 Como Executar o Projeto
+### 🔧 Requisitos
+- Node.js instalado (versão 16+ recomendada)
+- Conta AWS configurada com permissões adequadas
+- Chave de API para Mapbox ou Google Maps
+
+### 🏗️ Instalação
+1. Clone o repositório:
+   ```sh
+   git clone https://github.com/seu-usuario/rastreamento-caminhoes.git
+   ```
+2. Acesse o diretório do projeto:
+   ```sh
+   cd rastreamento-caminhoes
+   ```
+3. Instale as dependências:
+   ```sh
+   npm install
+   # ou
+   yarn install
+   ```
+4. Configure as variáveis de ambiente:
+   Crie um arquivo `.env.local` e adicione:
+   ```env
+   NEXT_PUBLIC_MAP_API_KEY=SUACHAVE
+   AWS_REGION=us-east-1
+   AWS_IOT_ENDPOINT=wss://xxxxx.iot.us-east-1.amazonaws.com/mqtt
+   ```
+5. Inicie o projeto em modo de desenvolvimento:
+   ```sh
+   npm run dev
+   # ou
+   yarn dev
+   ```
+6. Acesse no navegador:
+   ```
+   http://localhost:3000
+   ```
+
+## 📡 Estrutura do Projeto
+```
+├── components/       # Componentes reutilizáveis do Next.js
+├── pages/            # Páginas principais da aplicação
+├── services/         # Serviços para comunicação com AWS e WebSockets
+├── utils/            # Funções auxiliares
+├── public/           # Arquivos estáticos
+├── styles/           # Estilização do projeto
+└── .env.local        # Configuração de variáveis sensíveis
+```
+
+## 📡 Fluxo de Comunicação
+1. O cliente (Next.js) se conecta ao **AWS API Gateway WebSocket**.
+2. O backend (AWS Lambda) recebe e processa os eventos de localização.
+3. As coordenadas dos caminhões são armazenadas no **DynamoDB**.
+4. O frontend escuta as atualizações e exibe os caminhões no mapa.
+
+## 📌 Funcionalidades
+✅ Rastreamento em tempo real via WebSockets
+✅ Mapa interativo para visualização da frota
+✅ Integração com AWS para escalabilidade
+✅ Interface responsiva com Next.js
+✅ Suporte para vários dispositivos
+
+## 🤝 Contribuição
+Fique à vontade para contribuir! Basta seguir os passos:
+1. Fork este repositório
+2. Crie um branch com sua funcionalidade: `git checkout -b minha-feature`
+3. Commit suas alterações: `git commit -m 'Adicionando funcionalidade X'`
+4. Envie para o branch principal: `git push origin minha-feature`
+5. Abra um Pull Request 🚀
+
+## 📜 Licença
+Este projeto está sob a licença MIT - veja o arquivo [LICENSE](LICENSE) para mais detalhes.
+
+---
+
+Desenvolvido por [Lacerda](https://github.com/lacerdaaa) 🚀
+
