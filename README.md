@@ -142,13 +142,14 @@ Este projeto é um sistema de rastreamento de caminhões em tempo real, desenvol
 
 ## 📡 Estrutura do Projeto
 ```
-├── components/       # Componentes reutilizáveis do Next.js
-├── pages/            # Páginas principais da aplicação
-├── services/         # Serviços para comunicação com AWS e WebSockets
-├── utils/            # Funções auxiliares
-├── public/           # Arquivos estáticos
-├── styles/           # Estilização do projeto
-└── .env.local        # Configuração de variáveis sensíveis
+src/
+└───├── components/       # Componentes reutilizáveis do Next.js
+    ├── pages/            # Páginas principais da aplicação
+    ├── services/         # Serviços para comunicação com AWS e WebSockets
+    ├── utils/            # Funções auxiliares
+    ├── public/           # Arquivos estáticos
+    ├── styles/           # Estilização do projeto
+    └── .env.local        # Configuração de variáveis sensíveis
 ```
 
 ## 📡 Fluxo de Comunicação
