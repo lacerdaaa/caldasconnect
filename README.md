@@ -83,9 +83,6 @@ Fique à vontade para contribuir! Basta seguir os passos:
 4. Envie para o branch principal: `git push origin minha-feature`
 5. Abra um Pull Request 🚀
 
-## 📜 Licença
-Este projeto está sob a licença MIT - veja o arquivo [LICENSE](LICENSE) para mais detalhes.
-
 ---
 
 Desenvolvido por [Lacerda](https://github.com/lacerdaaa) 🚀
